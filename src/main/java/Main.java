@@ -2,32 +2,43 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // velkomst besked
-        System.out.println("Welcome to Superhero World!");
-
         Scanner sc = new Scanner(System.in);
-        System.out.println("Type in the name of your hero!");
-        String heroName = sc.nextLine();
-        System.out.println();
+        Database superHeroDatabase = new Database();
 
-        System.out.println("Type in the superpower of your hero!");
-        String superpower = sc.nextLine();
-        System.out.println();
+        int userChoice = 0;
+        do {
+            System.out.println("""
+                    Welcome to the SUPERHERO COLLECTOR!
+                    Type 1 to CREATE A NEW HERO
+                    Type 2 to CHECK YOUR COLLECTION OF HEROES!
+                    TYPE 5 to EXIT THE PROGRAM
+                    """);
 
-        System.out.println("Type in the birth year of your hero!");
-        int birthyear = sc.nextInt();
-        System.out.println();
+            userChoice = sc.nextInt();
+            sc.nextLine();
+            if (userChoice == 1) {
+                System.out.println("Enter the name of your superhero!");
+                String heroName = sc.nextLine();
+                System.out.println("Enter the superpower of your hero!");
+                String superpower = sc.nextLine();
+                System.out.println("When were your hero created?");
+                int birthyear = sc.nextInt();
+                System.out.println("What is the name of your hero, when he's not in uniform?");
+                String realName = sc.next();
+                System.out.println("How tall is your hero?");
+                double height = sc.nextInt();
+                System.out.println("What is the weight of your hero in kilograms?");
+                int weight = sc.nextInt();
+                System.out.println("From 1-99 rate the overall strenght of your superhero!");
+                int overallStrenght = sc.nextInt();
+            }
+            if (userChoice != 2) {
+                System.out.println("Here is a collection of your saved heroes!"); //+ få database her?!
+            }
 
-        System.out.println("Type the real life name of your superhero");
-        String realName = sc.next();
-        System.out.println();
-
-        System.out.println("Type in the height in centimeters of your hero");
-        double height = sc.nextInt();
-        System.out.println();
-
-        System.out.println("Type in the weight in kilos of your hero");
-        int weight = sc.nextInt();
-        System.out.println();
+        } while (userChoice != 5);
+        {
+            System.out.println("Thank you for using the SUPERHERO COLLECTOR! Have a great day!");
+        }
     }
 }
