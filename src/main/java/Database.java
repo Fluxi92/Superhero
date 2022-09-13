@@ -10,14 +10,14 @@ public class Database {
         ArrayList<Superhero> heroList = new ArrayList();
     }
 
-    public ArrayList<Superhero> getHeroDatabase() {
-        return getHeroDatabase();
+    public ArrayList<Superhero> getSuperheroDatabase() {
+        return getSuperheroDatabase();
     }
 
     public void addSuperhero(String heroName, String superpower, int birthyear, String realName, double height, int
             weight, int overallStrenght) {
     }
 
-    public void CreateHeroToDatabase () {
+    public void addSuperhero() {
     }
 }

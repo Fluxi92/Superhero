@@ -21,7 +21,7 @@ public class Main {
                 String heroName = sc.nextLine();
                 System.out.println("Enter the superpower of your hero!");
                 String superpower = sc.nextLine();
-                System.out.println("When were your hero created?");
+                System.out.println("In what year were your hero created?");
                 int birthyear = sc.nextInt();
                 System.out.println("What is the name of your hero, when he's not in uniform?");
                 String realName = sc.next();
@@ -31,9 +31,12 @@ public class Main {
                 int weight = sc.nextInt();
                 System.out.println("From 1-99 rate the overall strenght of your superhero!");
                 int overallStrenght = sc.nextInt();
+
+                superHeroDatabase.addSuperhero(heroName, superpower, birthyear, realName, height, weight, overallStrenght);
+                System.out.println("Congrats! Your SUPERHERO has succesfully been registred!");
             }
             if (userChoice != 2) {
-                System.out.println("Here is a collection of your saved heroes!"); //+ få database her?!
+                System.out.print("Here is a collection of your saved heroes!" + " " + superHeroDatabase.getSuperheroDatabase());
             }
 
         } while (userChoice != 5);
