@@ -7,7 +7,7 @@ public class Database {
     Scanner sc;
 
     public Database() {
-        ArrayList<Superhero> heroList = new ArrayList();
+        ArrayList<Superhero> superheroDatabase = new ArrayList();
     }
 
     public ArrayList<Superhero> getSuperheroDatabase() {

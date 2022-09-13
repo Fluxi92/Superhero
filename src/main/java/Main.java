@@ -35,8 +35,8 @@ public class Main {
                 superHeroDatabase.addSuperhero(heroName, superpower, birthyear, realName, height, weight, overallStrenght);
                 System.out.println("Congrats! Your SUPERHERO has succesfully been registred!");
             }
-            if (userChoice != 2) {
-                System.out.print("Here is a collection of your saved heroes!" + " " + superHeroDatabase.getSuperheroDatabase());
+            if (userChoice == 2) {
+                System.out.print("Here is a collection of your saved heroes!"); //få database fra array..?
             }
 
         } while (userChoice != 5);
